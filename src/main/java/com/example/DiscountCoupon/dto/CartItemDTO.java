@@ -4,8 +4,6 @@ public class CartItemDTO {
     private String productName;
     private Integer quantity;
     private Double price;
-
-    // Default constructor
     public CartItemDTO() {}
 
     public String getProductName() {

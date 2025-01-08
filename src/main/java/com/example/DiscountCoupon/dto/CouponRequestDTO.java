@@ -18,12 +18,12 @@ public class CouponRequestDTO {
     private Double discountValue;
     private Double minimumCartValue;
     private LocalDateTime expiryDate;
-    private List<Long> applicableProductIds; // For Product-wise coupons
-    private List<Long> buyProductIds;        // For BxGy coupons
-    private List<Long> getProductIds;        // For BxGy coupons
-    private Integer buyQuantity;             // For BxGy coupons
-    private Integer getQuantity;             // For BxGy coupons
-    private Integer repetitionLimit;         // Restrict coupon usage
+    private List<Long> applicableProductIds;
+    private List<Long> buyProductIds;
+    private List<Long> getProductIds;
+    private Integer buyQuantity;
+    private Integer getQuantity;
+    private Integer repetitionLimit;
 
     public String getType() {
         return type;

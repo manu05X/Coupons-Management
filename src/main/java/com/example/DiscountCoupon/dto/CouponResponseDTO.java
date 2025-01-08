@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 public class CouponResponseDTO {
     private Long id;
-    private String type; // Enum type as String
+    private String type;
     private String code;
     private Double discountValue;
     private Double minimumCartValue;

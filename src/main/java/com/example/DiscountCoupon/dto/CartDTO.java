@@ -6,7 +6,6 @@ public class CartDTO {
     private List<CartItemDTO> items;
     private Double totalAmount;
 
-    // Default constructor
     public CartDTO() {}
 
     public List<CartItemDTO> getItems() {

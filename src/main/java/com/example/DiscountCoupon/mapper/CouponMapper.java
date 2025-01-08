@@ -25,10 +25,10 @@ public class CouponMapper {
 //        return coupon;
 //    }
 
-    // Map from CouponRequestDTO to Coupon entity
+
     public Coupon toEntity(CouponRequestDTO dto) {
         Coupon coupon = new Coupon();
-        coupon.setType(CouponType.valueOf(dto.getType())); // Convert String to Enum
+        coupon.setType(CouponType.valueOf(dto.getType()));
         coupon.setCode(dto.getCode());
         coupon.setDiscountValue(dto.getDiscountValue());
         coupon.setMinimumCartValue(dto.getMinimumCartValue());
@@ -42,11 +42,11 @@ public class CouponMapper {
         return coupon;
     }
 
-    // Map from Coupon entity to CouponResponseDTO
+
     public CouponResponseDTO toResponseDTO(Coupon coupon) {
         CouponResponseDTO responseDTO = new CouponResponseDTO();
         responseDTO.setId(coupon.getId());
-        responseDTO.setType(coupon.getType().name()); // Convert Enum to String
+        responseDTO.setType(coupon.getType().name());
         responseDTO.setCode(coupon.getCode());
         responseDTO.setDiscountValue(coupon.getDiscountValue());
         responseDTO.setMinimumCartValue(coupon.getMinimumCartValue());

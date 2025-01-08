@@ -4,7 +4,6 @@ public class ApplicableCouponResponseDTO {
     private String couponCode;
     private Double discount;
 
-    // Default constructor
     public ApplicableCouponResponseDTO() {}
 
     public String getCouponCode() {

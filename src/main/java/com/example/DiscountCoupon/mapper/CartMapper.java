@@ -12,10 +12,10 @@ import java.util.stream.Collectors;
 @Component
 public class CartMapper {
 
-    // Map from Cart model to CartDTO
+
     public CartDTO toDTO(Cart cart) {
         List<CartItemDTO> cartItemDTOs = cart.getItems().stream()
-                .map(this::toDTO)  // Convert each CartItem to CartItemDTO
+                .map(this::toDTO)
                 .collect(Collectors.toList());
 
         CartDTO cartDTO = new CartDTO();
@@ -25,7 +25,6 @@ public class CartMapper {
         return cartDTO;
     }
 
-    // Map from CartItem model to CartItemDTO
     public CartItemDTO toDTO(CartItem cartItem) {
         CartItemDTO cartItemDTO = new CartItemDTO();
         cartItemDTO.setProductName(cartItem.getProductName());
@@ -35,10 +34,10 @@ public class CartMapper {
         return cartItemDTO;
     }
 
-    // Optionally, map CartDTO back to Cart model if needed
+
     public Cart toEntity(CartDTO cartDTO) {
         List<CartItem> cartItems = cartDTO.getItems().stream()
-                .map(this::toEntity)  // Convert each CartItemDTO back to CartItem
+                .map(this::toEntity)
                 .collect(Collectors.toList());
 
         Cart cart = new Cart();
@@ -48,7 +47,7 @@ public class CartMapper {
         return cart;
     }
 
-    // Optionally, map CartItemDTO back to CartItem model if needed
+
     public CartItem toEntity(CartItemDTO cartItemDTO) {
         CartItem cartItem = new CartItem();
         cartItem.setProductName(cartItemDTO.getProductName());
